@@ -1,7 +1,7 @@
-#About Yearly Projects
+# About Yearly Projects
 This idea was inspired after watching [1 year of C++](https://www.youtube.com/watch?v=LrEvoKI07Ww&t=1s) . In which I was inspired to complete 12 projects throughout 2018 that will utilize various concepts, tools, frameworks, etc; that are new to me and will challenge me to improve as a developer.
 
-#Project 1: LightBox Image Gallery
+# Project 1: LightBox Image Gallery
 
 **Languages & Libraries**: Javascript, PHP, Lightbox
 
