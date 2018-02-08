@@ -12,4 +12,4 @@ The gallery auto-populates 20 images(10 on mobile) and allows users to press a S
 
 The code for the Image Gallery was bartered with him to get some graphic design work done on my site.
 
-[VIDEO DEMO PENDING]
+[Video Demo](https://www.youtube.com/watch?v=tDp3O5vRL0A)
