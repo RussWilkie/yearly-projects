@@ -1,0 +1,116 @@
+body{
+    font-family: sans-serif;
+	margin-bottom: 10px;
+}
+
+#gallery{
+	text-align: center;
+	max-width: 2000px;
+	margin: auto;
+}
+#images{
+	text-align: justify;
+}
+h1{
+    margin: 30px 0px 50px;
+	text-align: center;
+}
+input[type="file"]{
+	display: none;
+}
+#show-more, #upload{
+	width: 7%;
+	background: #1594e5;
+	border-radius: 10px;
+	color: #fff;
+	font-family: sans-serif;
+	font-size: 20px;
+	display: block;
+	cursor: pointer;
+	text-align: center;
+	padding: 10px;
+	user-select: none;
+	margin: 40px auto;
+}
+.hidden{
+	display: none;
+}
+#show-more:active{
+	background: #18071af;
+}
+img{
+    width: 300px;
+	height: 200px;
+	object-fit: cover;
+    cursor: pointer;
+}
+
+/*Image Overlay*/
+.overlay  {
+    position: absolute;
+    right: 0;
+    left: 0;
+    cursor: pointer;
+    visibility: hidden;
+    color: transparent;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    transition: all ease-in .3s;
+}
+.overlay > img{
+    height: 50%;
+    width: 50%;
+    top: 50%; 
+    visibility: hidden;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    position: absolute;   
+}
+.overlay:hover > img{
+    visibility: visible; 
+	object-fit: contain;
+}
+.container {
+    position: relative;
+    display: inline-block;
+	margin: 5px;
+}
+.container:hover .overlay  {
+    visibility: visible;
+    opacity: .6;
+    background: black;
+    color: white;   
+}
+
+/*Loading Animation*/
+.modal {
+	display: none;
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #3498db; 
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    z-index:    1000;
+	margin: auto;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+body.loading {
+    overflow: hidden;   
+}
+body.loading .modal {
+    display: block;
+}
+
+/*Handler for Chrome browsers*/
+@media screen and (-webkit-min-device-pixel-ratio:0) { 
+      #images {
+            margin-left: 65px;
+			margin-right: auto;
+      }
+}

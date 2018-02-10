@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Image Gallery</title>
+        <link rel="stylesheet" type="text/css" href="stylesheets/main.css">
+        <link rel="stylesheet" type="text/css" href="stylesheets/lightbox.min.css">
+		<script type="text/javascript" src="scripts/upload.js"></script>
+        <script type="text/javascript" src="scripts/lightbox-plus-jquery.min.js"></script>
+        <script type="text/javascript" src="scripts/parser.js"></script>
+		<script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    </head>
+    <body>
+        <h1>Image Gallery</h1>
+		<label for="file-upload" id="upload">
+			<i class="fas fa-upload"></i> Upload
+		</label>
+		<form  id="add-file" action="scripts/upload.php" method="post" enctype="multipart/form-data">
+		<input id="file-upload" name="file-upload[]" type="file" multiple/>
+		</form>
+        <div id="gallery">	
+			<div id="images">
+			<!--Images added through parser script-->
+			</div>
+		</div>
+		<div class="modal"> </div>
+		<a id="show-more">Show More</a>
+		
+    </body>
+	<script>
+	$('#file-upload').change(function() {
+		$('#add-file').submit();
+	});
+	</script>
+</html>
