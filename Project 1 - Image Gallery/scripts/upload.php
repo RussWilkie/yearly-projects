@@ -1,5 +1,4 @@
 <?php
-$valid_formats = array("JPG", "PNG", "GIF", "BMP", "jpeg");
 $path = "../images/gallery/"; // Upload directory
 $count = 0;
 
